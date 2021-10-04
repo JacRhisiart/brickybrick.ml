@@ -33,4 +33,21 @@
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰ </button>  
   </div>
+  <script>
+    function parallax() {
+  var parallax = document.getElementById("parallax");
+  parallax.style.top = -(window.pageYOffset / 4)+'px';
+}
+
+window.addEventListener("scroll", parallax, false);
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+  </script>
   </html>
